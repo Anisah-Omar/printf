@@ -21,12 +21,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	for (p = (char *)format; *p; p++)
 	{
-		init_params(&params, ap);
-		if (*p != '%')
-		{
-			sum += _putchar(*p);
-			continue;
-		}
+		
 		start = p;
 		p++;
 		while (get_flag(p, &params)) /* while char at p is flag char */
